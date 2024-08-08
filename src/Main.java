@@ -21,14 +21,26 @@ public class Main {
         sp.setName("b");
         sp.setSize("fg");
         sp.setWeight("fj");
-        sp.setBigWings(true);
+        sp.setBigWings(11);
 
         List<Bird> parent= List.of(a,sp,p);
         List<Bird> children=new ArrayList<>();
 
         for(Bird b:parent){
-            children.add(b.cloneable());
+            children.add(b.clone());
         }
+        Sparrow longLegs=new Sparrow();
+        longLegs.setBigWings(24);
+        System.out.println(longLegs);
+        BirdRegistry registry=new BirdRegistry();
+        registry.addBird("longWings",longLegs);
+        registry.addBird("bird",a);
+        registry.addBird("sparrow",sp);
+        registry.addBird("pigeon",p);
 
+        System.out.println(registry.getBird("longWings"));
+        System.out.println(registry.getBird("longWings"));
+        System.out.println(registry.getBird("longWings"));
+        System.out.println(registry.getBird("bird"));
     }
 }

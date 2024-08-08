@@ -1,6 +1,6 @@
 package src;
 
-public class Bird {
+public class Bird implements Cloneable<Bird> {
 
     private String name;
 
@@ -17,7 +17,7 @@ public class Bird {
     public Bird(){
 
     }
-    public Bird cloneable(){
+    public Bird clone(){
         return new Bird(this);
     }
 
@@ -44,6 +44,7 @@ public class Bird {
     public void setWeight(String weight) {
         this.weight = weight;
     }
+
 
 
 }

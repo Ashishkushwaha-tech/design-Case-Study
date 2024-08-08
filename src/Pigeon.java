@@ -17,7 +17,7 @@ public class Pigeon extends Bird{
     public void setBrain(boolean brain) {
         this.brain = brain;
     }
-    public Pigeon cloneable(){
+    public Pigeon clone(){
         return new Pigeon(this);
     }
 }

@@ -1,7 +1,7 @@
 package src;
 
 public class Sparrow extends Bird {
-    private boolean bigWings;
+    private int bigWings;
     public Sparrow(){
 
     }
@@ -11,15 +11,15 @@ public class Sparrow extends Bird {
     }
 
 
-    public boolean isBigWings() {
+    public int getBigWings() {
         return bigWings;
     }
 
-    public void setBigWings(boolean bigWings) {
+    public void setBigWings(int bigWings) {
         this.bigWings = bigWings;
     }
 
-    public Sparrow cloneable(){
+    public Sparrow clone(){
         return new Sparrow(this);
     }
 }
